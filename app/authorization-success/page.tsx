@@ -1,15 +1,13 @@
-"use client";
+import { Suspense } from "react";
+import Code from "./code";
 
-import { useRouter } from "next/router";
-
-export default function Home() {
-    const router = useRouter();
-    const { code } = router.query;
-
+export default function Auth() {
     return (
         <>
             <h1>Authorization successful</h1>
-            <p>code: {code}</p>
+            <Suspense>
+                <Code />
+            </Suspense>
         </>
     );
 }
