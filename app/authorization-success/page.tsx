@@ -1,15 +1,16 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 export default function Home() {
-    const params = useParams<{ code: string }>();
+    const searchParams = useSearchParams();
 
-    console.log(params);
+    const code = searchParams.get("code");
+
     return (
         <>
             <h1>Authorization successful</h1>
-            <p>code: {params.code}</p>
+            <p>code: {code}</p>
         </>
     );
 }
