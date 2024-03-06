@@ -1,3 +1,4 @@
+"use client";
 import { ReadonlyURLSearchParams, useSearchParams } from "next/navigation";
 
 export default function Home() {
