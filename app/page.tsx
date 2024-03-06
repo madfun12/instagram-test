@@ -3,7 +3,9 @@ const url =
 export default function Home() {
     return (
         <>
-            <a href="url">Authorize eSAT</a>
+            <a href="url" className="p-4">
+                Authorize eSAT
+            </a>
         </>
     );
 }
