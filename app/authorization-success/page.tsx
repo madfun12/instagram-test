@@ -1,19 +1,15 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
-    const searchParams = useSearchParams();
-
-    const code = searchParams.get("code");
+    const router = useRouter();
+    const { code } = router.query;
 
     return (
         <>
             <h1>Authorization successful</h1>
-            <Suspense>
-                <p>code: {code}</p>
-            </Suspense>
+            <p>code: {code}</p>
         </>
     );
 }
